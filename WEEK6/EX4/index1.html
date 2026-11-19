@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4 - Media</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .wrapper {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    /* Small is the default */
+    .small {
+      display: inline-block;
+      background: tomato;
+      color: #fff;
+      padding: 4px 8px;
+    }
+    .big {
+      display: none;
+      background: yellowgreen;
+      color: #fff;
+      font-size: 2rem;
+      padding: 8px 16px;
+    }
+
+    /* 600px and up: swap to big */
+    @media only screen and (min-width: 600px) {
+      .small { display: none; }
+      .big { display: inline-block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <span class="small">I'm SMALL</span>
+      <span class="big">I'm BIG</span>
+    </div>
+  </div>
+</body>
+</html>

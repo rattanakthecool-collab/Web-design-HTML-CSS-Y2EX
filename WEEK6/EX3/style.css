@@ -1,0 +1,36 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mobile (default): stacked  */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.content, .sidebar {
+    flex: 1;
+    padding: 15px;
+}
+.content { background: #f2f2f2; }
+.sidebar { background: #ddd; }
+
+/* Medium: 600px and up, side by side, bigger header/footer */
+    @media (min-width: 600px) {
+      .main { flex-direction: row; }
+      header, footer { padding: 20px; font-size: 1.2rem; }
+    }
+
+/* Large: 900px and up, more padding, wide content, narrow sidebar */
+    @media (min-width: 900px) {
+      header, footer { padding: 30px; font-size: 1.5rem; }
+      .content { flex: 3; }
+      .sidebar { flex: 1; }
+    }
